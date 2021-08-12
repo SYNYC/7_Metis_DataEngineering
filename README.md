@@ -1,7 +1,7 @@
 # Data Engineering Project Proposal
 
 ### Question/Need 
-To use cloud computing and big data pipelines to create a Fashion/E-commerce Products Recommendation System based on the product images given.   
+To use cloud computing and big data pipelines to create an E-commerce/Fashion Products Recommendation System based on the product images given.   
 
 
 #### Data Description
