@@ -1,5 +1,5 @@
 # Data Engineering Project Proposal
-Recommending Similar Fashion Images with Deep Learning and Data Engineering
+Recommending Similar Fashion Images (with Deep Learning and Data Engineering)
 
 #### Question/Need 
 
