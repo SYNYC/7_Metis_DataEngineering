@@ -24,8 +24,7 @@ From the data structure, I was able to use a Python wrapper of an API to pull JS
 ## app - early stage
 
 
-<img src="https://github.com/SYNYC/5_Project_Tweets_about_Tesla_Stock/blob/main/charts/date_sentiment.png">
-
+<img src="https://github.com/SYNYC/7_Metis_DataEngineering/blob/main/img_upload/mvp_demo.png">
 
 
 
@@ -35,7 +34,3 @@ Next, I am aiming to build a data engineering pipeline for re-scape data that ca
 
 
 
-
-
-
-- rescale the images size to 150 x 150
