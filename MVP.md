@@ -12,7 +12,7 @@ From the data structure, I was able to use a Python wrapper of an API to pull JS
 
 - only focus on 3 bags brands on the early stage
 
-- Three classes : {'bag Gucci': 0, 'bag Prada': 1, 'bag YSL': 2}
+- Three classes : **{'bag Gucci': 0, 'bag Prada': 1, 'bag YSL': 2}**
 	- Total : 1587 documents
 	- Train dataset: Found 1271 files belonging to 3 classes.
 	- Validation dataset: Found 316 files belonging to 3 classes.
