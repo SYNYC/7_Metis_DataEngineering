@@ -14,18 +14,20 @@ The main function is to identify its brand by the images of the bags, and it can
 0. API web scrapping + MongoDB
 1. Preprocessing
 2. Deep Learning
-3. Pipeline processing framework to auto renew database and retrain model
+3. Pipeline processing framework to auto renew database and retrain the model
 4. Deploy the processing framework as an app service
 
 ## Data
 
 This dataset is downloaded from [FARFETCH](https://www.farfetch.com) by web scrapping through API. One of the reasons I chose Farfetch was that their images are high resolution with clear cutout and model wear, and I think it is a good resource to build on the image classification model.
 
-The original dataset has over 400,000 items. Since my project is to focus on bag sections that have 21,516 items with 669 different brands from the database, then I used MongoDB to find the top list of bags brands and pick 5 out of the list – the final data size is 1670 with **5** different brands –  **YSL, Prada, Gucci, Hermes, and LV**.
+The original dataset has over 400,000 items. Since ¬¬¬¬my project is to focus on bag sections that have 21,516 items with 669 different brands from the database, then I used MongoDB to find the top list of bags brands and pick 5 out of the list – the final data size is 1670 with 5 different brands –  **YSL, Prada, Gucci, Hermes, and LV**.
 
 #### EDA image
 
 <img src="https://github.com/SYNYC/7_Metis_DataEngineering/blob/main/img_upload/eda5.png" >
+
+
 
 
 
@@ -35,9 +37,9 @@ The original dataset has over 400,000 items. Since my project is to focus on bag
 **0. API web scrapping + MongoDB**
 
 
-- Data ingestion:  use a Python wrapper of an API to pull JSON files Farfetch.com from Farfetch.com that can be read directly into a Mongo database for data acquisition, cleaning and eda.
-  - a. ingest new data: my code can work and properly update the database weekly by cronjob
-  - b. Database quality control: run it weekly and on only the first page since the renewal items will be added on Page 1 with not too heavy frequency – the pipeline can be run in the balance of  time and database quality
+- Data ingestion:  use a Python wrapper of an API to pull JSON files from Farfetch.com that can be read directly into a Mongo database for data acquisition, cleaning and eda.
+  - a. ingest new data: the code can work and properly update the database 
+  - b. Database quality control: run it bi-weekly and on only the first page since the renewal items will be added on Page 1 with not too heavy frequency – the pipeline can be run in the balance of time and database quality
 
 - Data storage: NoSQL MongoDB: load a series of JSON files with data on product info directly into a MongoDB collection.
 
@@ -51,14 +53,10 @@ The original dataset has over 400,000 items. Since my project is to focus on bag
 
 -	 Transfer Learning (VGG16) : batch size = 32, added 3 Dense Layers, epochs = 20, and tried epochs = 100  + callbacks.EarlyStopping + callbacks.ReduceLROnPlateau
 
--	Image Augmentation 
+-	Image Augmentation: since the dataset is small so I use this method to flip to increase dataset size(rotation = 40, horizontal flip), however, the test accuracy score is higher than the training score which shows overfitting, so I didn’t use this approach to continue my training. 
 
-since the dataset is small so I use this method to flip to increase dataset size
-•	preprocessing 1: do image dataset train-test-split via data directory
-•	preprocessing 2: ImageDataGenerator on training dataset for augmentation(rotation = 40, horizontal flip)
 
-Tried for  8 brand
-but image augeta not good - overfit
+- Multi classification: I tried to classify 3,5,6 and 8 different brands and the accuracy scores are around 70-80%, but since the data size is small and given Image Augmentation had an overfit issue in my case, I decided to take 5 different brands model as the final deployment. 
 
 
 
