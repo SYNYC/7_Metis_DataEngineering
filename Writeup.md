@@ -100,12 +100,12 @@ I tried to increase the classes number as 3,5,6 and 8 different brands to classi
 ## Results
 
 
-### 1. Final model accuracy score
-accuracy 0.7838
+### 1. Final model accuracy score:  0.7838
+accuracy & loss chart
 
-
-<img src="https://github.com/SYNYC/6_Project_ImageClassification/blob/main/charts/accuracy_loss.png" >
+<img src="https://github.com/SYNYC/7_Metis_DataEngineering/blob/main/img_upload/accuracy%20loss.png" >
 
 ### 2. Streamlit app screenshot
 
+upload the bag image and it shows the correct prediction with cheerful balloons animation.
 <img src="https://github.com/SYNYC/7_Metis_DataEngineering/blob/main/img_upload/app_demo_all.png" >
