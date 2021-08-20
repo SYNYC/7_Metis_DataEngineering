@@ -76,7 +76,9 @@ I tried to increase the classes number as 3,5,6 and 8 different brands to classi
 
 
 **4. Deploy the processing framework as an app service**
-use the model to apply on streamlit for end-user to identify bags’ brands by uploading the image(supported jpg/ png/ jpeg formats)
+
+
+- use the model to apply on streamlit for end-user to identify bags’ brands by uploading the image(supported jpg/ png/ jpeg formats)
 
 
 **Workflow**
