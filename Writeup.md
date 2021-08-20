@@ -108,4 +108,4 @@ accuracy 0.7838
 
 ### 2. Streamlit app screenshot
 
-<img src="https://github.com/SYNYC/6_Project_ImageClassification/blob/main/charts/accuracy_loss.png" >
+<img src="https://github.com/SYNYC/7_Metis_DataEngineering/blob/main/img_upload/app_demo_all.png" >
