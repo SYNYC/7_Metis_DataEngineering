@@ -101,9 +101,20 @@ I tried to increase the classes number as 3,5,6 and 8 different brands to classi
 
 
 ### 1. Final model accuracy score:  0.7838
-accuracy & loss chart
+a. accuracy & loss chart
 
 <img src="https://github.com/SYNYC/7_Metis_DataEngineering/blob/main/img_upload/accuracy%20loss.png" >
+
+
+b. confusion matrix
+
+<img src="https://github.com/SYNYC/7_Metis_DataEngineering/blob/main/img_upload/confusion%20matrix.png" >
+
+
+c. classification report
+<img src="https://github.com/SYNYC/7_Metis_DataEngineering/blob/main/img_upload/classification_report.png" >
+
+
 
 ### 2. Streamlit app screenshot
 
