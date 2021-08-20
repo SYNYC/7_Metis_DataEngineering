@@ -25,7 +25,7 @@ The original dataset has over 400,000 items. Since ¬¬¬¬my project is to focu
 
 # EDA image
 
-<img src="https://github.com/SYNYC/6_Project_ImageClassification/blob/main/charts/workflow.png" >
+<img src="https://github.com/SYNYC/7_Metis_DataEngineering/blob/main/img_upload/eda5.png" >
 
 
 
