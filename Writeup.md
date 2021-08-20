@@ -14,8 +14,8 @@ The main function is to identify its brand by the images of the bags, and it can
 0. API web scrapping + MongoDB
 1. Preprocessing
 2. Deep Learning
-3. Pipeline processing framework 
-
+3. Pipeline processing framework to auto renew database and retrain model
+4. Deploy the processing framework as an app service
 
 ## Data
 
@@ -61,16 +61,21 @@ Tried for  8 brand
 but image augeta not good - overfit
 
 
-**3. Pipeline processing framework **
 
 
-develop reusable code for the whole process and saved the model to reuse/retrain.
+**3. Pipeline processing framework to auto renew database and retrain model **
 
-**5. Deploy the processing framework as a service**
+- develop reusable python code for the whole process and saved the model to reuse/retrain
+- set cron job to command API to renew MongoDB data bi-weekly
+- as above, after collecting the new feeding data for every 3 months, the deep learning model is set to connect the database and retrain the model to renew quarterly/seasonally 
+
+
+
+**4. Deploy the processing framework as an app service**
 use the model to apply on streamlit for end-user to identify bags’ brands by uploading the image(supported jpg/ png/ jpeg formats)
 
 
-**7. Workflow**
+**5. Workflow**
 <img src="https://github.com/SYNYC/6_Project_ImageClassification/blob/main/charts/workflow.png" >
 
 
