@@ -1,5 +1,5 @@
 # Data Engineering Project Proposal
-### Bag Hunter 
+## Bag Hunter 
 
 - web scrapping [Farfetch.com](https://www.farfetch.com) fashion products 
 - create an end-user app with _Deep Learning_ and _Data Engineering_ recursively updating database
