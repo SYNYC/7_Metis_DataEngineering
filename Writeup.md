@@ -37,11 +37,13 @@ The original dataset has over 400,000 items. Since ¬¬¬¬my project is to focu
 **0. API web scrapping + MongoDB**
 
 
-- Data ingestion:  use a Python wrapper of an API to pull JSON files from Farfetch.com that can be read directly into a Mongo database for data acquisition, cleaning and eda.
+- Data ingestion:  
+use a Python wrapper of an API to pull JSON files from Farfetch.com that can be read directly into a Mongo database for data acquisition, cleaning and eda.
   - a. ingest new data: the code can work and properly update the database 
   - b. Database quality control: run it bi-weekly and on only the first page since the renewal items will be added on Page 1 with not too heavy frequency – the pipeline can be run in the balance of time and database quality
 
-- Data storage: NoSQL MongoDB: load a series of JSON files with data on product info directly into a MongoDB collection.
+- Data storage: 
+- NoSQL MongoDB: load a series of JSON files with data on product info directly into a MongoDB collection.
 
 **1. Preprocessing**
 
@@ -51,17 +53,20 @@ The original dataset has over 400,000 items. Since ¬¬¬¬my project is to focu
 
 **2. Deep Learning**
 
--	 Transfer Learning (VGG16) : batch size = 32, added 3 Dense Layers, epochs = 20, and tried epochs = 100  + callbacks.EarlyStopping + callbacks.ReduceLROnPlateau
+-	 Transfer Learning (VGG16) : 
+batch size = 32, added 3 Dense Layers, epochs = 20, and tried epochs = 100  + callbacks.EarlyStopping + callbacks.ReduceLROnPlateau
 
--	Image Augmentation: since the dataset is small so I use this method to flip to increase dataset size(rotation = 40, horizontal flip), however, the test accuracy score is higher than the training score which shows overfitting, so I didn’t use this approach to continue my training. 
-
-
-- Multi classification: I tried to classify 3,5,6 and 8 different brands and the accuracy scores are around 70-80%, but since the data size is small and given Image Augmentation had an overfit issue in my case, I decided to take 5 different brands model as the final deployment. 
-
+-	Image Augmentation: 
+since the dataset is small so I use this method to flip to increase dataset size(rotation = 40, horizontal flip), however, the test accuracy score is higher than the training score which shows overfitting, so I didn’t use this approach to continue my training. 
 
 
+- Multi classification: 
+I tried to increase the classes number as 3,5,6 and 8 different brands to classify, and the accuracy scores are around 70-80%, but since the data size is small and given Image Augmentation had an overfit issue in my case, I decided to take 5 different brands model as the final deployment. 
 
-**3. Pipeline processing framework to auto renew database and retrain model **
+
+
+
+**3. Pipeline processing framework to auto renew database and retrain model**
 
 - develop reusable python code for the whole process and saved the model to reuse/retrain
 - set cron job to command API to renew MongoDB data bi-weekly
@@ -82,10 +87,8 @@ use the model to apply on streamlit for end-user to identify bags’ brands by u
 
 
 1. **Numpy & Pandas**: data manipulation  
-2.**MongoDB** : data storage
-3. **keras** :
-- image preprocessing
-- Transfer Learning package
+2. **MongoDB** : data storage
+3. **keras** : transfer Learning package & image preprocessing
 4. **streamlit**: web app deployment
 
 
