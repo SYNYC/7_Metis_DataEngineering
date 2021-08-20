@@ -38,30 +38,30 @@ The goal of my project is to focus on bag sections which have 21,516 items with 
 **0. API web scrapping + MongoDB**
 
 
-- Data ingestion:  
+- __Data ingestion__:  
 use a Python wrapper of an API to pull JSON files from Farfetch.com that can be read directly into a Mongo database for data acquisition, cleaning and eda.
   - a. ingest new data: the code can work and properly update the database 
   - b. Database quality control: run it bi-weekly and on only the first page since the renewal items will be added on Page 1 with not too heavy frequency – the pipeline can be run in the balance of time and database quality
 
-- Data storage: 
+- __Data storage__: 
 MongoDB is NoSQL database, which is suitable to load a series of JSON files with data on product info directly into a MongoDB collection.
 
 **1. Preprocessing**
 
-- Data Directories Setup: setup folders with the notebook to get data from path folders. Directly download products images through MongoDB product images URL link
+- __Data Directories Setup__: setup folders with the notebook to get data from path folders. Directly download products images through MongoDB product images URL link
 
-- Images Preprocessing: using _keras.preprocessing_ & _ImageDataGenerator_
+- __Images Preprocessing__: using _keras.preprocessing_ & _ImageDataGenerator_
 
 **2. Deep Learning**
 
--	 Transfer Learning (VGG16) : 
+-	 __Transfer Learning (VGG16)__ : 
 batch size = 32, added 3 Dense Layers, epochs = 20, and tried epochs = 100  + callbacks.EarlyStopping + callbacks.ReduceLROnPlateau
 
--	Image Augmentation: 
+-	__Image Augmentation__: 
 since the dataset is small so I use this method to flip to increase dataset size(rotation = 40, horizontal flip), however, the test accuracy score is higher than the training score which shows overfitting, so I didn’t use this approach to continue my training. 
 
 
-- Multi classification: 
+- __Multi classification__: 
 I tried to increase the classes number as 3,5,6 and 8 different brands to classify, and the accuracy scores are around 70-80%, but since the data size is small and given Image Augmentation had an overfit issue in my case, I decided to take 5 different brands model as the final deployment. 
 
 
