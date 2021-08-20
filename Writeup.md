@@ -75,8 +75,8 @@ but image augeta not good - overfit
 use the model to apply on streamlit for end-user to identify bags’ brands by uploading the image(supported jpg/ png/ jpeg formats)
 
 
-**5. Workflow**
-<img src="https://github.com/SYNYC/6_Project_ImageClassification/blob/main/charts/workflow.png" >
+**Workflow**
+<img src="https://github.com/SYNYC/7_Metis_DataEngineering/blob/main/img_upload/workflow_.png" >
 
 
 
