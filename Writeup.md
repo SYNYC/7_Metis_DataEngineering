@@ -21,7 +21,8 @@ The main function is to identify its brand by the images of the bags, and it can
 
 This dataset is downloaded from [FARFETCH](https://www.farfetch.com) by web scrapping through API. One of the reasons I chose Farfetch was that their images are high resolution with clear cutout and model wear, and I think it is a good resource to build on the image classification model.
 
-The original dataset has over 400,000 items. Since ¬¬¬¬my project is to focus on bag sections that have 21,516 items with 669 different brands from the database, then I used MongoDB to find the top list of bags brands and pick 5 out of the list – the final data size is 1670 with 5 different brands –  **YSL, Prada, Gucci, Hermes, and LV**.
+The original website dataset has over 400,000 items downloaded in MongoDB.
+The goal of my project is to focus on bag sections which have 21,516 items with 669 different brands from the database, and I used MongoDB to find the top list of bags brands and pick 5 out of the list – the final data size is 1670 with 5 different brands –  **YSL, Prada, Gucci, Hermes, and LV**.
 
 #### EDA image
 
@@ -43,7 +44,7 @@ use a Python wrapper of an API to pull JSON files from Farfetch.com that can be 
   - b. Database quality control: run it bi-weekly and on only the first page since the renewal items will be added on Page 1 with not too heavy frequency – the pipeline can be run in the balance of time and database quality
 
 - Data storage: 
-- NoSQL MongoDB: load a series of JSON files with data on product info directly into a MongoDB collection.
+MongoDB is NoSQL database, which is suitable to load a series of JSON files with data on product info directly into a MongoDB collection.
 
 **1. Preprocessing**
 
