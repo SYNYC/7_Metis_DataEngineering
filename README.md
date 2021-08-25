@@ -13,7 +13,7 @@ To use cloud computing and big data pipelines to create an e-commerce/fashion pr
 
 #### Data Description
 
-The data of product information will be web scraping from [Farfetch.com](https://www.farfetch.com) by using API to collect product descriptions and images, etc. Next, I'll create a database to store the images data on MongoDB.
+The data of product information will be web scraping from [Farfetch.com](https://www.farfetch.com) by using API to collect product descriptions and images, etc. Next, I'll create a database to store the data on MongoDB.
 
 I plan to start with one specific category (**as Bag Section**) to build up my model. I’ll take the images of 5 major bags brands – __YSL, Gucci, Prada, Hermes, LV__ for modeling. I'll apply keras deep learning to train the model, then make it to a predict function to take a new image input to identify the bag’s brand. If necessary, I'll use Google Cloud Platform and Google Colab for a more efficient way to deal with big data.
 
